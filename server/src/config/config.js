@@ -8,5 +8,8 @@ port: 8081,
             dialect: process.env.DIALECT || 'sqlite',
             storage: './nvwebblog-db.sqlite'
         },
-    }
+    },
+        authentication: {
+            jwtSecret: 'neung'
+        }
 }

@@ -54,6 +54,7 @@ export default {
     }
   },
   async created () {
+     console.log(this.user)
     try {
       let userId = this.$route.params.userId
       this.user = (await UsersService.show(userId)).data

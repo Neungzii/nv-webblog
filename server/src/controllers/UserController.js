@@ -26,17 +26,17 @@ module.exports = {
     }, 
  
 // edit user, suspend, active
-     async put (req, res) {
-         try {
-            await User.update(req.body, { 
+    async put (req, res) {
+        try {
+        await User.update(req.body, {
             where: {
-            id: req.params.userId
-                   }       
-            })       
-            res.send(req.body)
-        }   catch (err) {
-            res.status(500).send({
-                error: 'Update user incorrect'
+                id: req.params.userId
+            }
+        })
+        res.send(req.body)
+        } catch (err) {
+        res.status(500).send({
+            error: 'Update user incorrect'
             })     
         }   
     }, 

@@ -3,8 +3,8 @@ import Api from '@/services/Api'
 export default {
     index (search) {
         return Api().get('users')   
-    },  
-    show (userId) {     
+    },   
+    show (userId) {
         return Api().get('user/'+userId)   
     },   
     post (user) {     
@@ -13,9 +13,7 @@ export default {
     put (user) {     
         return Api().put('user/'+user.id, user)   
     },   
-    delete (user) {     
-        return Api().delete('user/'+user.id, user)  
-     }, 
-} 
- 
- 
+    delete (user) {
+        return Api().delete('user/'+user.id, user)
+    }, 
+}
